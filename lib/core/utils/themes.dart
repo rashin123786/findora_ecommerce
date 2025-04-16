@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/constants/app_color.dart';
 import 'package:flutter/material.dart';
 
 class Themes {
@@ -6,6 +7,7 @@ class Themes {
       scaffoldBackgroundColor: Colors.white,
       appBarTheme: AppBarTheme(backgroundColor: Colors.white),
       primaryColor: Color(0XFF26374b),
+      focusColor: AppColor.mainColor,
       colorScheme: ColorScheme.fromSwatch().copyWith(
         secondary: Color(0XFFf18a37),
       ));
