@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/features/auth/screens/login_screen.dart';
 import 'package:ecommerce_app/features/auth/screens/onboard_screen.dart';
+import 'package:ecommerce_app/features/home/screen/each_item_screen.dart';
 import 'package:ecommerce_app/features/home/screen/home_screen.dart';
 import 'package:ecommerce_app/shared/screens/api_error_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -35,6 +36,16 @@ class Approute {
         name: 'homeScreen',
         builder: (context, state) => HomeScreen(),
       ),
+      GoRoute(
+          path: '/eachItemScreen/:id',
+          name: 'eachItemScreen',
+          builder: (context, state) {
+            final id = int.parse(state.pathParameters['id']!);
+
+            return EachItemScreen(
+              id: id,
+            );
+          }),
     ],
   );
   GoRouter get router => _appRouter;
